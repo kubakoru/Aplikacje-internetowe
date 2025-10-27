@@ -1,0 +1,74 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#controls {
+  margin: 10px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 20px;
+}
+
+#left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right-column {
+  width: 512px;
+  height: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map {
+  width: 512px;
+  height: 512px;
+  background-color: white;
+  position: relative;
+  z-index: 0;
+}
+
+#pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(4, 128px);
+  grid-template-rows: repeat(4, 128px);
+  gap: 5px;
+}
+
+.piece {
+  width: 128px;
+  height: 128px;
+  border: 1px solid #ccc;
+  cursor: grab;
+}
+
+.slot {
+  width: 128px;
+  height: 128px;
+  border: 2px dashed #999;
+  background-color: #f9f9f9;
+}
+
+.leaflet-tile {
+  image-rendering: auto;
+  opacity: 1 !important;
+}
