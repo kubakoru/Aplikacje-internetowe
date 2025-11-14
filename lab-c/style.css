@@ -1,0 +1,170 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+  margin: 20px 0;
+}
+
+#controls {
+  margin: 10px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#controls button:hover {
+  background-color: #45a049;
+}
+
+#controls button:active {
+  background-color: #3d8b40;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+#left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#right-column {
+  width: 532px;
+  height: 532px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#map {
+  width: 512px;
+  height: 512px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 0;
+}
+
+#mapCanvas {
+  width: 512px;
+  height: 512px;
+  background-color: white;
+  border: 3px solid #4CAF50;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  margin-top: 10px;
+}
+
+#mapCanvas::before {
+  content: "Canvas - Mapa zapisana jako rastr";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+#pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  min-height: 150px;
+  width: 512px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(4, 128px);
+  grid-template-rows: repeat(4, 128px);
+  gap: 2px;
+  background-color: #e0e0e0;
+  padding: 2px;
+}
+
+.piece {
+  width: 128px;
+  height: 128px;
+  border: 2px solid #999;
+  cursor: grab;
+  transition: transform 0.2s, opacity 0.2s;
+  border-radius: 3px;
+}
+
+.piece:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.piece:active {
+  cursor: grabbing;
+}
+
+.slot {
+  width: 128px;
+  height: 128px;
+  border: 2px dashed #999;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.slot:hover {
+  background-color: #e8f5e9;
+}
+
+.slot img {
+  width: 128px;
+  height: 128px;
+  border-radius: 0;
+  cursor: default;
+}
+
+.leaflet-tile {
+  image-rendering: auto;
+  opacity: 1 !important;
+}
+
+/* Responsywność */
+@media (max-width: 1200px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
