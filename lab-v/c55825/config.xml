@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="pl.edu.zut.wi.bj55825" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Jakub 55825</name>
+    <description>
+        Weather app
+    </description>
+    <author email="bj55825@zut.edu.pl" href="https://www.wi.zut.edu.pl">
+        Jakub Bartoszewicz
+    </author>
+    <content src="weather.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <platform name="electron">
+    <icon src="res/electron/weather-icon.png" />
+    <preference name="ElectronSettingsFilePath" value="res/electron/settings.json" />
+</platform>
+</widget>

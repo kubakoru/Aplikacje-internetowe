@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja Pogodowa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Aplikacja Pogodowa</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Wprowadź nazwę miasta (np. Lublin, Warszawa, London)">
+            <button id="weatherBtn">Pogoda</button>
+        </div>
+
+        <div class="loading" id="loading">Ładowanie danych pogodowych...</div>
+        <div class="error" id="error"></div>
+
+        <div class="current-weather" id="currentWeather">
+            <h2>Aktualna pogoda</h2>
+            <div class="weather-main">
+                <div class="weather-icon" id="currentIcon"></div>
+                <div>
+                    <div id="cityName"></div>
+                    <div class="weather-temp" id="currentTemp"></div>
+                    <div id="currentDesc"></div>
+                </div>
+            </div>
+            <div class="weather-details" id="weatherDetails"></div>
+        </div>
+
+        <div class="forecast" id="forecast">
+            <h2>Prognoza 5-dniowa</h2>
+            <div class="forecast-grid" id="forecastGrid"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
